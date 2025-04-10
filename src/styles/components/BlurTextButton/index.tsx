@@ -1,17 +1,18 @@
 'use client';
-import { useState } from "react"
-import { blur, container,visible } from "./styles.css"
+import { ReactNode, useState } from "react";
+
+import { blur, container,visible } from "./styles.css";
 
 interface BlurTextButtonProps{
-  triggerTextContent: string
-  textContent:string
+triggerTextContent: string
+  textContent:ReactNode
 }
 
 export default function BlurTextButton({textContent,triggerTextContent}:BlurTextButtonProps){
-  const [hasBlur, setHasBlur] = useState(true)
-  
+  const [ hasBlur, setHasBlur ] = useState(true);
+ 
   function unBlur(){
-    setHasBlur(!hasBlur)
+    setHasBlur(!hasBlur);
   }
 
   return(
@@ -23,5 +24,5 @@ export default function BlurTextButton({textContent,triggerTextContent}:BlurText
         {textContent}
       </p>
     </>
-  )
+  );
 }
