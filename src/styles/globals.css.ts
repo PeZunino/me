@@ -4,8 +4,7 @@ import { vars } from './theme/default.css';
 
 globalStyle('body', {
   color: vars.color.text,
-  backgroundImage: 'url(/45-degree-fabric-dark.png)',
-  backgroundColor: "#161616",
+
   fontFamily: vars.font.playFair,
   fontWeight: vars.font.weight.md,
   fontSize: '16px',

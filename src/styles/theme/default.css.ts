@@ -7,8 +7,9 @@ export const vars = createGlobalTheme(":root",{
   font: {
     playFair:"var(--font-playfair_display);",
     size:{
-      md: '1rem',
-      lg: '5rem'
+      sm: '1rem',
+      md: '2.5rem',
+      lg: '4rem',
     },
     weight:{
       md: '400'
