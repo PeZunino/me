@@ -1,13 +1,14 @@
-import { createTheme  } from '@vanilla-extract/css';
+import { createGlobalTheme  } from '@vanilla-extract/css';
 
-export const vars = createTheme({
+export const vars = createGlobalTheme(":root",{
   color: {
     text: "#ababad",
   },
   font: {
     playFair:"var(--font-playfair_display);",
     size:{
-      md: '1rem'
+      md: '1rem',
+      lg: '5rem'
     },
     weight:{
       md: '400'

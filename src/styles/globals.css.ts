@@ -1,5 +1,6 @@
 import { globalStyle } from '@vanilla-extract/css';
-import { vars } from './theme/types.css';
+import { vars } from './theme/default.css';
+
 
 globalStyle('body', {
   color: vars.color.text,
@@ -7,8 +8,7 @@ globalStyle('body', {
   backgroundColor: "#161616",
   fontFamily: vars.font.playFair,
   fontWeight: vars.font.weight.md,
-  fontSize: vars.font.size.md,
-  
+  fontSize: '16px',
 });
 
 globalStyle("body, input, textarea, button",{
