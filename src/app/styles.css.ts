@@ -1,4 +1,5 @@
-import { globalStyle, style } from '@vanilla-extract/css';
+import {  globalStyle, style } from '@vanilla-extract/css';
+
 import { vars } from '@/styles/theme/default.css';
 
 export const section = style({
@@ -17,8 +18,9 @@ export const section = style({
   lineHeight: "120%",
   fontSize: vars.font.size.md,
 
-})
+});
 
-globalStyle(`${section} p`, {
+
+globalStyle(`${section} div p`, {
   display: 'inline'
 });
