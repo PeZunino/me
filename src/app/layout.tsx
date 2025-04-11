@@ -1,7 +1,8 @@
+import '@/styles/globals.css.ts';
+
 import type { Metadata } from "next";
 import { Geist } from "next/font/google";
-import {Playfair_Display} from 'next/font/google'
-import '@/styles/globals.css.ts';
+import {Playfair_Display} from 'next/font/google';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
