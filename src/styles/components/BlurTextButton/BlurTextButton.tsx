@@ -1,31 +1,22 @@
 'use client';
-import { ReactNode, useState } from "react";
 
-import { blur, container,trigger,visible } from "./BlurTextButton.css";
+import React, { ReactNode, useState } from 'react';
 
-interface BlurTextButtonProps{
-  triggerTextContent: string
+import { blur,revealContainer,revealed } from './BlurTextButton.css';
+
+interface RevealProps{
+  label: string
   children:ReactNode
 }
 
-export default function BlurTextButton({children,triggerTextContent}:BlurTextButtonProps){
-  const [ hasBlur, setHasBlur ] = useState(true);
- 
-  function unBlur(){
-    setHasBlur(!hasBlur);
-  }
-
-  return(
-    <div className={container}>
-
-      <p className={trigger} onClick={unBlur}>
-        {triggerTextContent}
-      </p>
-     
-      <p className={hasBlur ? blur : visible}>
-        {children}
-      </p>
-  
-    </div> 
+export default function Reveal({ label, children }:RevealProps){
+  const [isBlurred, setIsBlurred] = useState(false);
+  return (
+    <>
+      <span className={revealContainer} onClick={() => setIsBlurred(!isBlurred)}>
+        {label}
+      </span>
+      <span className={isBlurred ? revealed : blur}> {children}</span>
+    </>
   );
-}
+};

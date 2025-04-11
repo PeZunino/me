@@ -1,6 +1,5 @@
 import {  globalStyle, style } from '@vanilla-extract/css';
 
-import { vars } from '@/styles/theme/default.css';
 
 export const section = style({
   padding: '2rem 20rem',
@@ -16,11 +15,23 @@ export const section = style({
 
   textAlign:'center',
   lineHeight: "120%",
-  fontSize: vars.font.size.md,
+  fontSize: '2rem',
 
 });
 
+export const blur = style({
+  // filter: 'blur(5px)',
+  // position: 'absolute'
+});
 
-globalStyle(`${section} div p`, {
-  display: 'inline'
+export const triggerWord = style({
+  // filter: 'none',
+  // position: 'relative',
+  // fontWeight: "bold"
+});
+
+globalStyle(`${section} span `, {
+  // width: '100%',
+  // backgroundColor: "red"
+  marginBottom:"10px"
 });
