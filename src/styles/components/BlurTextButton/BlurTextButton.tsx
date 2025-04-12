@@ -1,27 +1,67 @@
 'use client';
 
 import React, { ReactNode, useState } from 'react';
-import { blur, revealContainer, revealed } from './BlurTextButton.css';
+import { useRevealStore } from '@/stores/reveal.store';
+import { revealButton, revealContainer } from './BlurTextButton.css';
 
-
+// unlockedList = []
 interface RevealProps {
-	label: string
-	children: ReactNode
+	label: string,
+	dependsOnLabel?: string,
+	children: ReactNode,
 }
 
 export default function Reveal({
-	label, children 
+	label, children, dependsOnLabel = ''
 }: RevealProps) {
+
+
+	const visibleLabelsList = useRevealStore((state) => state.visibleLabelsList);
+
+	const addToVisibleLabelsList = useRevealStore((state) => state.addToVisibleLabelsList);
+
+	const removeFromVisibleLabelsList = useRevealStore((state) => state.removeFromVisibleLabelsList);
+
+	const isChildren = Boolean(dependsOnLabel);
+
+	const parentLabelIsVisible = visibleLabelsList.has(dependsOnLabel);
+
+	const isLocked = isChildren && !parentLabelIsVisible;
+
 	const [
-		isBlurred, setIsBlurred
-	] = useState(false);
+		isVisible, setIsVisible
+	] = useState(visibleLabelsList.has(label));
+
+
+	function revealText() {
+		console.log(isVisible);
+
+		if (isVisible) {
+			removeFromVisibleLabelsList(label);
+
+			setIsVisible(false);
+
+		} else {
+			addToVisibleLabelsList(label);
+
+			setIsVisible(true);
+
+		}
+
+	}
+
+
+	console.log(visibleLabelsList);
+
 
 	return (
 		<>
-			<span className={revealContainer} onClick={() => setIsBlurred(!isBlurred)}>
+			<button disabled={isLocked} className={revealContainer} onClick={() => revealText()}>
 				{label}
-			</span>
-			<span className={isBlurred ? revealed : blur}> {children}</span>
+			</button >
+			<span className={(isChildren ? (isLocked ? (!parentLabelIsVisible) : isVisible) : isVisible) ? revealButton.revealed : revealButton.blurred}>
+				{children}
+			</span >
 		</>
 	);
 }

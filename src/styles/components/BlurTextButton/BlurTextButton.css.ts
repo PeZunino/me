@@ -1,27 +1,35 @@
-import { style } from '@vanilla-extract/css';
+import { style, styleVariants } from '@vanilla-extract/css';
 import { vars } from '@/styles/theme/default.css';
 
 export const revealContainer = style({
+	padding: '0px 10px',
+	backgroundColor: 'transparent',
+	
 	borderWidth: '2px',
 	borderStyle: 'solid',
 	borderColor: vars.color.text,
-	fontSize: '1.6rem',
-	display: 'inline-block',
 	borderRadius: '50px 50px',
-	padding: '0px 10px',
+	
+	cursor: 'pointer',
+	display: 'inline-block',
+	
+	color: vars.color.text,
+	fontSize: '1.6rem',
 	fontWeight: 'bold',
-	cursor: 'pointer'
+	
+	selectors: {'&:disabled': {cursor: 'default',},},
 });
 
-export const blur = style({
-	filter: 'blur(5px)',
-	transition: 'filter 0.3s ease',
-	userSelect: 'none',
+export const revealButton = styleVariants({
+	blurred: {
+		filter: 'blur(5px)',
+		transition: 'filter 0.3s ease',
+		userSelect: 'none',
+	},
+	revealed: {
+		filter: 'none',
+		userSelect: 'text',
+		transition: 'filter 0.3s ease',
+	},
 });
 
-export const revealed = style({
-	filter: 'none',
-	userSelect: 'text',
-	transition: 'filter 0.3s ease',
-
-});
