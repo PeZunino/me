@@ -29,7 +29,7 @@ export const revealContainer = style({
 
 export const revealButton = styleVariants({
 	blurred: {
-		filter: 'blur(10px)',
+		filter: 'blur(12px)',
 		transition: 'filter 0.3s ease',
 		userSelect: 'none',
 	},

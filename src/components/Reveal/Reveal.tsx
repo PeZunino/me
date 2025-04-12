@@ -2,7 +2,7 @@
 
 import React, { ReactNode, useState } from 'react';
 import { useRevealStore } from '@/stores/reveal.store';
-import { revealButton, revealContainer } from './BlurTextButton.css';
+import { revealButton, revealContainer } from './Reveal.css';
 
 interface RevealProps {
 	label: string,
