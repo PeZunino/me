@@ -15,6 +15,7 @@ export const section = style({
 	textAlign:'center',
 	lineHeight: '2.60rem',
 	fontSize: '1.5rem',
+	height: '100vh',
 	'@media': {
 		'screen and (max-width: 1024px)': {
 			padding: '1rem 3rem',
