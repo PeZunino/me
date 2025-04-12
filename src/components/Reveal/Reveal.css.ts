@@ -14,9 +14,17 @@ export const revealContainer = style({
 	display: 'inline-block',
 	
 	color: vars.color.text,
-	fontSize: '22px',
+	fontSize: '1.2rem',
 	fontWeight: 'bold',
-	
+	'@media': {
+		'screen and (max-width: 1024px)': {fontSize:'0.4rem'},
+		// 'screen and (max-width: 768px)': {padding: '2rem 5rem',},
+		// 'screen and (max-width: 480px)': {
+		// 	padding: '1.5rem 2rem', 
+		// 	fontSize: '1.5rem',
+		// 	lineHeight: '2rem'
+		// }
+	},
 	selectors: {
 		'&:disabled': {cursor: 'default',},
 		'&:not(:disabled):hover': {

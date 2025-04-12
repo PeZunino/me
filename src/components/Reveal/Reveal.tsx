@@ -33,7 +33,6 @@ export default function Reveal({
 
 
 	function revealText() {
-		console.log(isVisible);
 
 		if (isVisible) {
 			removeFromVisibleLabelsList(label);
