@@ -1,9 +1,12 @@
 import { createGlobalTheme } from '@vanilla-extract/css';
 
 export const vars = createGlobalTheme(':root',{
-	color: {text: '#ababad',},
+	color: {
+		text: '#ababad',
+		hover:'#d4a418'
+	},
 	font: {
-		playFair:'var(--font-playfair_display);',
+		geistMono: '"Manrope-mono", var(font-manrope-mono), monospace',
 		size:{
 			sm: '1rem',
 			md: '2.5rem',

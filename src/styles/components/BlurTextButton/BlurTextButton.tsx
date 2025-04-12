@@ -4,7 +4,6 @@ import React, { ReactNode, useState } from 'react';
 import { useRevealStore } from '@/stores/reveal.store';
 import { revealButton, revealContainer } from './BlurTextButton.css';
 
-// unlockedList = []
 interface RevealProps {
 	label: string,
 	dependsOnLabel?: string,
@@ -49,10 +48,6 @@ export default function Reveal({
 		}
 
 	}
-
-
-	console.log(visibleLabelsList);
-
 
 	return (
 		<>
