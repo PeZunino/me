@@ -2,7 +2,7 @@
 
 import React, { ReactNode, useState } from 'react';
 import { useRevealStore } from '@/stores/reveal.store';
-import { revealButton, revealContainer } from './Reveal.css';
+import { revealButtonContainer, revealContent, revealContentBlur, revealContentRevealed } from './Reveal.css';
 
 interface RevealProps {
 	label: string,
@@ -50,12 +50,12 @@ export default function Reveal({
 
 	return (
 		<>
-			<button disabled={isLocked} className={revealContainer} onClick={() => revealText()}>
+			<button disabled={isLocked} className={revealButtonContainer} onClick={() => revealText()}>
 				{label}
 			</button >
-			<span className={(isChildren ? (isLocked ? (!parentLabelIsVisible) : isVisible) : isVisible) ? revealButton.revealed : revealButton.blurred}>
+			<div className={`${(isChildren ? (isLocked ? (!parentLabelIsVisible) : isVisible) : isVisible) ? revealContentRevealed : revealContentBlur} ${revealContent}`}>
 				{children}
-			</span >
+			</div>
 		</>
 	);
 }
