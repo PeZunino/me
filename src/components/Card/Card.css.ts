@@ -1,4 +1,4 @@
-import { globalStyle, style } from '@vanilla-extract/css';
+import { style } from '@vanilla-extract/css';
 import { vars } from '@/styles/theme/default.css';
 
 export const cardContainer = style({
@@ -7,6 +7,7 @@ export const cardContainer = style({
 	cursor: 'pointer',
 	border: '1px solid transparent',
 	transition: 'all 0.2s ease-in-out',
+	marginBottom: '2rem',
 	selectors:{
 		'&:hover':{
 			background: ' rgba(150, 150, 150, 0.1);',
@@ -27,7 +28,7 @@ export const cardContent = style({
 	flex:'1',
 	display:'flex',
 	flexDirection: 'column',
-	gap: '0.5rem'
+	gap: '1rem'
 });
 
 export const cardTitle = style({fontSize: vars.font.size.md});
@@ -39,6 +40,12 @@ export const skillList = style({
 	listStyle:'none',
 	gap: '0.5rem',
 	fontSize: vars.font.size.sm,
+
+});
+
+export const skillContainer = style({
+	padding: '0.25rem 1rem',
+	borderRadius: '15px 15px',
 	backgroundColor: ' rgba(212, 164, 24, 0.1)',
 	color: '#d4a418',
 });

@@ -1,18 +1,26 @@
-import { cardContainer, cardContent, cardDescription, cardTimeContainer, cardTitle, skillList } from './Card.css';
+import { cardContainer, cardContent, cardDescription, cardTimeContainer, cardTitle, skillContainer, skillList } from './Card.css';
 
-export function Card() {
+interface CardProps {
+	skills: string[],
+	title: string,
+	description: string,
+}
+
+export function Card({
+	skills, title, description
+}: CardProps) {
 	return (
 		<div className={cardContainer}>
 			<span className={cardTimeContainer}>2024 — Present</span>
 			<div className={cardContent}>
-				<span className={cardTitle}>Senior Frontend Engineer, Accessibility ·</span>
+				<span className={cardTitle}>{title} ·</span>
 
-				<p className={cardDescription}>Build and maintain critical components used to construct Klaviyo’s frontend, across the whole product. Work closely with cross-functional teams, including developers, designers, and product managers, to implement and advocate for best practices in web accessibility.</p>
+				<p className={cardDescription}>
+					{description}
+				</p>
 				<ul className={skillList}>
-					<li>JavaScript</li>
-					<li>Typescript</li>
-					<li>React</li>
-					<li>StoryBook</li>
+					{skills.map(skill => <li className={skillContainer} key={skill}>{skill}</li>)}
+
 				</ul>
 			</div>
 		</div>
