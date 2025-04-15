@@ -11,7 +11,7 @@ export const cardContainer = style({
 	selectors:{
 		'&:hover':{
 			background: ' rgba(150, 150, 150, 0.1);',
-			boxShadow: '0 8px 32px 0 rgba(255, 255, 255, 0.2)',
+			// boxShadow: '0 8px 32px 0 rgba(255, 255, 255, 0.2)',
 			borderRadius:' 10px',
 			border: '1px solid rgba( 255, 255, 255, 0.18 )',
 		}
@@ -21,7 +21,10 @@ export const cardContainer = style({
 
 export const cardTimeContainer = style({
 	width:'20%',
-	fontWeight:'bold'
+	fontWeight:'bold',
+	color: vars.color.gray,
+	marginTop: '0.25rem'
+
 });
 
 export const cardContent = style({
@@ -31,16 +34,22 @@ export const cardContent = style({
 	gap: '1rem'
 });
 
-export const cardTitle = style({fontSize: vars.font.size.md});
+export const cardTitle = style({
+	fontSize: vars.font.size.md,
+	fontWeight: 'bold'
+});
 
-export const cardDescription = style({fontSize: '0.875rem'});
+export const cardDescription = style({
+	fontSize: '0.875rem',
+	color: vars.color.gray
+});
 
 export const skillList = style({
 	display: 'flex',
 	listStyle:'none',
 	gap: '0.5rem',
 	fontSize: vars.font.size.sm,
-
+	flexWrap: 'wrap'
 });
 
 export const skillContainer = style({

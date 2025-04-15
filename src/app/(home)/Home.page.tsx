@@ -20,32 +20,33 @@ export default function Home() {
 
 					<Reveal label="DESENVOLVEDOR FULL STACK">
 						{' '}Para me apresentar preciso dizer que comecei automatizando processos e construindo{' '}
-						<Reveal dependsOnLabel='DESENVOLVEDOR FULL STACK' label="BOTS">{' '}com Node e jQuery, assim descobri desenvolvimento {' '}</Reveal>
-					</Reveal>
-					<Reveal label="WEB">{' '}e tudo começou a fazer mais sentido.
-						<br />
-						<br />
-
-						{' '}Fui de soluções low-code como Mendix até algumas experiências com{' '}
-						<Reveal dependsOnLabel='WEB' label='TYPESCRIPT/ REACT/ REACT NATIVE'>{' '}até cair de cabeça em stacks como{' '}</Reveal>
-
-					</Reveal>
-					<Reveal label="NEST / NEXT"> {' '}foi aí que descobri meu lugar: criando produtos do zero, colaborando com ideias, pensando em{' '}</Reveal>
-					<Reveal label="ARQUITETURA">
-						{' '}e boas práticas.
-						<br />
-						<br />
-
-						Hoje, tenho me aprofundado em conceitos como{' '}
-
-						<Reveal dependsOnLabel='ARQUITETURA' label="TDD / DDD">{' '}conhecendo mais sobre{' '}</Reveal>
-						<Reveal dependsOnLabel='ARQUITETURA' label="SDLC / PATTERNS">{' '}explorando formas de construir software com mais intenção, clareza e escala. Ainda tô absorvendo bastante coisa{' '}
-							<Reveal dependsOnLabel="SDLC / PATTERNS" label="EM BREVE">, talvez compartilhe por aqui o que ando aprendendo.
-								<br />
-								<br />
-								Moro em </Reveal>
+						<Reveal dependsOnLabel='DESENVOLVEDOR FULL STACK' label="BOTS">
+							{' '}com Node e jQuery, assim descobri desenvolvimento web e tudo começou a fazer mais sentido.
+							<br />
+							<br />
+							{' '}Fui de soluções low-code como Mendix até algumas experiências com{' '}
+							<Reveal dependsOnLabel='BOTS' label='TYPESCRIPT/ REACT/ REACT NATIVE'>{' '}até cair de cabeça em stacks como{' '}</Reveal>
 						</Reveal>
 					</Reveal>
+
+
+					<Reveal label="NEST / NEXT">
+						{' '}foi aí que descobri meu lugar: criando produtos do zero, colaborando com ideias, pensando em arquitetura e boas práticas.{' '}
+						<br />
+						<br />
+						Hoje, tenho me aprofundado em conceitos como{' '}
+
+					</Reveal>
+
+					<Reveal label="TDD / DDD">
+						{' '}conhecendo mais sobre SDLC e patterns explorando formas de construir software com mais intenção, clareza e escala. Ainda tô absorvendo bastante coisa{' '}
+						<Reveal dependsOnLabel="TDD / DDD" label="EM BREVE">, talvez compartilhe por aqui o que ando aprendendo.
+							<br />
+							<br />
+							Moro em{' '}
+						</Reveal>
+					</Reveal>
+
 					<Reveal label="ITAJAÍ">
 						, Santa Catarina. Você pode me achar no{' '}
 						<Reveal dependsOnLabel='ITAJAÍ' label="GITHUB">{' '} ou LinkedIn</Reveal>
@@ -78,7 +79,9 @@ export default function Home() {
 					description='Build and maintain critical components used to construct Klaviyo’s frontend, across the whole product. Work closely with cross-functional teams, including developers, designers, and product managers, to implement and advocate for best practices in web accessibility.'
 					title='Senior Frontend Engineer, Accessibility'
 					skills={[
-						'JavaScript', 'Typescript', 'React', 'StoryBook'
+						'JavaScript', 'Typescript', 'React', 'StoryBook',
+						'JavaScript1', 'Typescript2', 'React3', 'StoryBook4'
+
 					]}
 				/><Card
 					description='Build and maintain critical components used to construct Klaviyo’s frontend, across the whole product. Work closely with cross-functional teams, including developers, designers, and product managers, to implement and advocate for best practices in web accessibility.'

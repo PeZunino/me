@@ -12,6 +12,7 @@ export const revealButtonContainer = style({
 	
 	cursor: 'pointer',
 
+	// fontWeight: 'bold',
 	color: vars.color.white,
 
 	selectors: {
