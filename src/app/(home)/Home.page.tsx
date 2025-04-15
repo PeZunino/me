@@ -11,7 +11,6 @@ export default function Home() {
 				<h1>Pedro Zunino</h1>
 				<h2>Full Stack Developer</h2>
 				<div>
-					<p>Menu</p>
 				</div>
 			</aside>
 
@@ -52,51 +51,53 @@ export default function Home() {
 						<Reveal dependsOnLabel='ITAJAÍ' label="GITHUB">{' '} ou LinkedIn</Reveal>
 					</Reveal>
 				</section >
+				<Card
+					business='UseRH'
+					endDate='Jul 2024'
+					startDate='Set 2023'
+					description='Desenvolvimento de plataformas web para gestão de avaliações de desempenho, focado em UX/UI e lógica de backend no Mendix. Contribuí ativamente para melhorar a experiência do usuário e a organização da aplicação.'
+					title='Desenvolvedor Mendix'
+					skills={[
+						'Mendix', 'Low code', 'SCSS', 'HTML', 'UX/UI'
+					]}
+				/>
+				<Card
+					startDate='Jan 2023'
+					endDate='Mai 2023'
+					business='Freelancer'
+					description='Desenvolvimento de projetos web e mobile. Criação de site e compra de domínio, garantindo presença online.'
+					title='Desenvolvedor Web e Mobile'
+					skills={[
+						'React', 'React Native', 'Expo', 'Firebase', 'Typescript', 'UX/UI'
+					]}
+				/>
+				<Card
+					endDate='Dez 2022'
+					startDate='Ago 2022'
+					business='Group WS'
+					description='Atuação no suporte à equipe de elétrica na escolha e implementação de sistemas de automação residencial e revisão de orçamentos.'
+					title='Assistente Administrativo de TI'
+					skills={[
+						'Zigbee', 'ELAN', 'IOT', 'Excel'
+					]}
+				/>
+				<Card
+					startDate='Nov 2018'
+					endDate='Jun 2022'
+					business='Joinsy'
+					description='Desenvolvimento e manutenção de automações para extração de dados de portais públicos e privados, otimizando processos de licitação.'
+					title='Desenvolvedor RPA / Web Crawling'
+					skills={[
+						'JavaScript', 'Typescript', 'Node.js', 'jQuery',
+						'Low code', 'RabbitMQ', 'Docker', 'Puppeteer', 'PostgreSQL'
+					]}
+				/>
 
 
-				<Card
-					description='Build and maintain critical components used to construct Klaviyo’s frontend, across the whole product. Work closely with cross-functional teams, including developers, designers, and product managers, to implement and advocate for best practices in web accessibility.'
-					title='Senior Frontend Engineer, Accessibility'
-					skills={[
-						'JavaScript', 'Typescript', 'React', 'StoryBook'
-					]}
-				/>
-				<Card
-					description='Build and maintain critical components used to construct Klaviyo’s frontend, across the whole product. Work closely with cross-functional teams, including developers, designers, and product managers, to implement and advocate for best practices in web accessibility.'
-					title='Senior Frontend Engineer, Accessibility'
-					skills={[
-						'JavaScript', 'Typescript', 'React', 'StoryBook'
-					]}
-				/>
-				<Card
-					description='Build and maintain critical components used to construct Klaviyo’s frontend, across the whole product. Work closely with cross-functional teams, including developers, designers, and product managers, to implement and advocate for best practices in web accessibility.'
-					title='Senior Frontend Engineer, Accessibility'
-					skills={[
-						'JavaScript', 'Typescript', 'React', 'StoryBook'
-					]}
-				/>
-				<Card
-					description='Build and maintain critical components used to construct Klaviyo’s frontend, across the whole product. Work closely with cross-functional teams, including developers, designers, and product managers, to implement and advocate for best practices in web accessibility.'
-					title='Senior Frontend Engineer, Accessibility'
-					skills={[
-						'JavaScript', 'Typescript', 'React', 'StoryBook',
-						'JavaScript1', 'Typescript2', 'React3', 'StoryBook4'
 
-					]}
-				/><Card
-					description='Build and maintain critical components used to construct Klaviyo’s frontend, across the whole product. Work closely with cross-functional teams, including developers, designers, and product managers, to implement and advocate for best practices in web accessibility.'
-					title='Senior Frontend Engineer, Accessibility'
-					skills={[
-						'JavaScript', 'Typescript', 'React', 'StoryBook'
-					]}
-				/>
-				<Card
-					description='Build and maintain critical components used to construct Klaviyo’s frontend, across the whole product. Work closely with cross-functional teams, including developers, designers, and product managers, to implement and advocate for best practices in web accessibility.'
-					title='Senior Frontend Engineer, Accessibility'
-					skills={[
-						'JavaScript', 'Typescript', 'React', 'StoryBook'
-					]}
-				/>
+
+
+
 			</main>
 
 		</div >

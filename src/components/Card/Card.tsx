@@ -4,16 +4,19 @@ interface CardProps {
 	skills: string[],
 	title: string,
 	description: string,
+	business: string,
+	startDate: string,
+	endDate: string
 }
 
 export function Card({
-	skills, title, description
+	skills, title, description, business, endDate, startDate
 }: CardProps) {
 	return (
 		<div className={cardContainer}>
-			<span className={cardTimeContainer}>2024 — Present</span>
+			<span className={cardTimeContainer}>{startDate} — {endDate ?? 'Present'}</span>
 			<div className={cardContent}>
-				<span className={cardTitle}>{title} ·</span>
+				<span className={cardTitle}>{title} · {business}</span>
 
 				<p className={cardDescription}>
 					{description}

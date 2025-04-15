@@ -20,7 +20,7 @@ export const cardContainer = style({
 });
 
 export const cardTimeContainer = style({
-	width:'20%',
+	width:'25%',
 	fontWeight:'bold',
 	color: vars.color.gray,
 	marginTop: '0.25rem'
