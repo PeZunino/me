@@ -6,9 +6,8 @@ export const layoutContainer = style({
 	padding: '6rem 3rem',
 	
 	display: 'flex',
-	color: vars.color.text,
-	
-	backgroundColor:vars.color.background,
+	gap: '10rem',
+	backgroundColor:vars.color.black,
 
 	
 });
@@ -19,12 +18,12 @@ export const asideContent = style({
 });
 
 export const mainContent = style({
-	width:'37.5rem',
+	width:'60%',
 	border: 'solid red 2px'
 });
 
 export const section = style({
-
+	marginBottom: '5rem',
 	'@media': {
 		'screen and (max-width: 1024px)': {
 			padding: '1rem 3rem',

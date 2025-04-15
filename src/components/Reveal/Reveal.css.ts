@@ -7,25 +7,28 @@ export const revealButtonContainer = style({
 	
 	borderWidth: '1px',
 	borderStyle: 'solid',
-	borderColor: vars.color.text,
+	borderColor: vars.color.white,
 	borderRadius: '50px 50px',
 	
 	cursor: 'pointer',
-	
-	color: vars.color.text,
-	
+
+	color: vars.color.white,
+
 	selectors: {
 		'&:disabled': {cursor: 'default',},
 		'&:not(:disabled):hover': {
-			backgroundColor: vars.color.hover,
-			color: vars.color.background,
-			borderColor: vars.color.hover,
+			backgroundColor: vars.color.yellow500,
+			color: vars.color.black,
+			borderColor: vars.color.yellow500,
 		},	
 	},
 	'@media': {'screen and (max-width: 1024px)': {fontSize:'0.4rem'},},
 });
 
-export const revealContent = style({display: 'inline'});
+export const revealContent = style({
+	display: 'inline',
+	color: vars.color.gray,
+});
 
 export const revealContentBlur = style({
 	filter: 'blur(5px)',

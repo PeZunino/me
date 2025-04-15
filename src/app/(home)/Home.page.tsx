@@ -1,5 +1,6 @@
 'use client';
 
+import { Card } from '@/components/Card/Card';
 import Reveal from '@/components/Reveal/Reveal';
 import { asideContent, layoutContainer, mainContent, section } from './Home.css';
 
@@ -52,6 +53,8 @@ export default function Home() {
 						<Reveal dependsOnLabel='ITAJAÍ' label="GITHUB">{' '} ou LinkedIn</Reveal>
 					</Reveal>
 				</section >
+
+				<Card />
 			</main>
 
 		</div>
