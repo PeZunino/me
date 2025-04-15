@@ -1,25 +1,35 @@
-import { style } from '@vanilla-extract/css';
-import { vars } from '@/styles/theme/default.css';
+import { globalStyle, style } from '@vanilla-extract/css';
 
 export const layoutContainer = style({
-	height: '100vh',
-	padding: '6rem 3rem',
-	
-	display: 'flex',
-	gap: '10rem',
-	backgroundColor:vars.color.black,
 
+	overflow: 'hidden',
+	height: '100vh',
+	position: 'absolute'
 	
 });
 
 export const asideContent = style({
-	flex:1,
-	border: 'solid blue 2px'
+	// flex:1,
+	paddingTop: '5rem',
+	paddingLeft: '3rem',
+	// border: 'solid blue 2px',
+	position: 'relative',
+	float: 'left'
 });
+
+globalStyle(`${asideContent} h1`,{lineHeight: 1});
 
 export const mainContent = style({
 	width:'60%',
-	border: 'solid red 2px'
+	// border: 'solid red 2px',
+	position: 'relative',
+	float: 'right',
+	overflow:'scroll',
+	height: '100%',
+	paddingTop: '5rem',
+	paddingRight: '3rem',
+	paddingLeft: '3rem',
+
 });
 
 export const section = style({

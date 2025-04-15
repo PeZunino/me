@@ -4,7 +4,7 @@ import { vars } from './theme/default.css';
 
 globalStyle('body', {
 	color: vars.color.white,
-
+	backgroundColor:vars.color.black,
 	fontFamily: vars.font.family.manrope,
 	fontWeight: vars.font.weight.md,
 	fontSize: '16px',

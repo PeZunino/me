@@ -17,12 +17,10 @@ export default function Home() {
 
 			<main className={mainContent}>
 				<section className={section}>
-					<Reveal label='PEDRO ZUNINO'>
-						{' '}sou{' '}
-						<Reveal dependsOnLabel='PEDRO ZUNINO' label="DESENVOLVEDOR FULL STACK">
-							{' '}Para me apresentar preciso dizer que comecei automatizando processos e construindo{' '}
-							<Reveal dependsOnLabel='DESENVOLVEDOR FULL STACK' label="BOTS">{' '}com Node e jQuery, assim descobri desenvolvimento {' '}</Reveal>
-						</Reveal>
+
+					<Reveal label="DESENVOLVEDOR FULL STACK">
+						{' '}Para me apresentar preciso dizer que comecei automatizando processos e construindo{' '}
+						<Reveal dependsOnLabel='DESENVOLVEDOR FULL STACK' label="BOTS">{' '}com Node e jQuery, assim descobri desenvolvimento {' '}</Reveal>
 					</Reveal>
 					<Reveal label="WEB">{' '}e tudo começou a fazer mais sentido.
 						<br />
@@ -54,10 +52,51 @@ export default function Home() {
 					</Reveal>
 				</section >
 
-				<Card />
+
+				<Card
+					description='Build and maintain critical components used to construct Klaviyo’s frontend, across the whole product. Work closely with cross-functional teams, including developers, designers, and product managers, to implement and advocate for best practices in web accessibility.'
+					title='Senior Frontend Engineer, Accessibility'
+					skills={[
+						'JavaScript', 'Typescript', 'React', 'StoryBook'
+					]}
+				/>
+				<Card
+					description='Build and maintain critical components used to construct Klaviyo’s frontend, across the whole product. Work closely with cross-functional teams, including developers, designers, and product managers, to implement and advocate for best practices in web accessibility.'
+					title='Senior Frontend Engineer, Accessibility'
+					skills={[
+						'JavaScript', 'Typescript', 'React', 'StoryBook'
+					]}
+				/>
+				<Card
+					description='Build and maintain critical components used to construct Klaviyo’s frontend, across the whole product. Work closely with cross-functional teams, including developers, designers, and product managers, to implement and advocate for best practices in web accessibility.'
+					title='Senior Frontend Engineer, Accessibility'
+					skills={[
+						'JavaScript', 'Typescript', 'React', 'StoryBook'
+					]}
+				/>
+				<Card
+					description='Build and maintain critical components used to construct Klaviyo’s frontend, across the whole product. Work closely with cross-functional teams, including developers, designers, and product managers, to implement and advocate for best practices in web accessibility.'
+					title='Senior Frontend Engineer, Accessibility'
+					skills={[
+						'JavaScript', 'Typescript', 'React', 'StoryBook'
+					]}
+				/><Card
+					description='Build and maintain critical components used to construct Klaviyo’s frontend, across the whole product. Work closely with cross-functional teams, including developers, designers, and product managers, to implement and advocate for best practices in web accessibility.'
+					title='Senior Frontend Engineer, Accessibility'
+					skills={[
+						'JavaScript', 'Typescript', 'React', 'StoryBook'
+					]}
+				/>
+				<Card
+					description='Build and maintain critical components used to construct Klaviyo’s frontend, across the whole product. Work closely with cross-functional teams, including developers, designers, and product managers, to implement and advocate for best practices in web accessibility.'
+					title='Senior Frontend Engineer, Accessibility'
+					skills={[
+						'JavaScript', 'Typescript', 'React', 'StoryBook'
+					]}
+				/>
 			</main>
 
-		</div>
+		</div >
 
 	);
 }
