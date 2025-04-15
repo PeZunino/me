@@ -3,7 +3,7 @@ import { vars } from './theme/default.css';
 
 
 globalStyle('body', {
-	color: vars.color.text,
+	color: vars.color.white,
 
 	fontFamily: vars.font.family.manrope,
 	fontWeight: vars.font.weight.md,

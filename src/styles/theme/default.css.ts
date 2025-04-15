@@ -2,9 +2,11 @@ import { createGlobalTheme } from '@vanilla-extract/css';
 
 export const vars = createGlobalTheme(':root',{
 	color: {
-		text: '#d6dfee',
-		background: '#1b1b1b',
-		hover:'#d4a418'
+		white: '#d6dfee',
+		black: '#1b1b1b',
+		gray: '#9ca3af',
+		yellow400:'rgba(212, 164, 24, 0.1)',
+		yellow500:'#d4a418'
 	},
 	font: {
 		family:{manrope: '"Manrope-mono", var(font-manrope-mono), monospace',},
