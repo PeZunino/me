@@ -1,4 +1,4 @@
-import { cardContainer, cardContent, cardDescription, cardTimeContainer, cardTitle, skillContainer, skillList } from './Card.css';
+import { businessName, businessNameHover, cardContainer, cardContent, cardDescription, cardDimmedOnHover, cardHighlighted, cardTimeContainer, cardTitle, skillContainer, skillList } from './Card.css';
 
 interface CardProps {
 	skills: string[],
@@ -6,17 +6,27 @@ interface CardProps {
 	description: string,
 	business: string,
 	startDate: string,
-	endDate: string
+	endDate: string,
+	businessURL: string
 }
 
 export function Card({
-	skills, title, description, business, endDate, startDate
+	skills, title, description, business, endDate, startDate, businessURL
 }: CardProps) {
 	return (
-		<div className={cardContainer}>
+		<div className={`${cardContainer} ${cardDimmedOnHover} ${cardHighlighted}`}>
 			<span className={cardTimeContainer}>{startDate} — {endDate ?? 'Present'}</span>
 			<div className={cardContent}>
-				<span className={cardTitle}>{title} · {business}</span>
+				<span className={`${cardTitle} ${businessNameHover}`}>
+					{title}{' '}·{' '}
+					<a className={`${businessName} `}
+						target="_blank"
+						rel="noopener noreferrer"
+						href={businessURL}
+					>
+						{business}
+					</a>
+				</span>
 
 				<p className={cardDescription}>
 					{description}

@@ -1,4 +1,5 @@
 import { style } from '@vanilla-extract/css';
+import { cardList } from '@/app/(home)/Home.css';
 import { vars } from '@/styles/theme/default.css';
 
 export const cardContainer = style({
@@ -11,13 +12,23 @@ export const cardContainer = style({
 	selectors:{
 		'&:hover':{
 			background: ' rgba(150, 150, 150, 0.1);',
-			// boxShadow: '0 8px 32px 0 rgba(255, 255, 255, 0.2)',
 			borderRadius:' 10px',
 			border: '1px solid rgba( 255, 255, 255, 0.18 )',
 		}
-	}
+	},
 
+	opacity: '1', 
 });
+
+export const cardDimmedOnHover = style({selectors: {[`${cardList}:hover &:not(:hover)`]: {opacity: '0.5',},},});
+
+export const cardHighlighted = style({
+	':hover': {
+		opacity: '1 !important',
+		transform: 'scale(1.02)',
+	},
+});
+
 
 export const cardTimeContainer = style({
 	width:'25%',
@@ -39,6 +50,24 @@ export const cardTitle = style({
 	fontWeight: 'bold'
 });
 
+export const businessName = style({
+	fontSize: vars.font.size.md,
+	fontWeight: 'bold',
+	color: 'inherit', 
+	textDecoration: 'none',
+	transition: 'color 0.2s ease',
+	':hover': {textDecoration: 'none',},
+	':visited': {color: 'inherit',},
+	':active': {color: 'inherit', },
+	':focus': {
+		color: 'inherit',
+		outline: 'none',
+	},
+	':focus-visible': {color: 'inherit',},
+});
+
+export const businessNameHover = style({selectors: {[`${cardContainer}:hover &`]: {color: '#d4a418', },},});
+
 export const cardDescription = style({
 	fontSize: '0.875rem',
 	color: vars.color.gray
@@ -58,3 +87,4 @@ export const skillContainer = style({
 	backgroundColor: ' rgba(212, 164, 24, 0.1)',
 	color: '#d4a418',
 });
+

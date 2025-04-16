@@ -44,3 +44,20 @@ export const section = style({
 		},
 	}
 });
+
+export const cardList = style({});
+
+export const cardDimmedOnHover = style({selectors: {[`${cardList}:hover &:not(:hover)`]: {opacity: '0.5',},},});
+
+export const cardHighlighted = style({
+	':hover': {
+		opacity: '1 !important',
+		transform: 'scale(1.02)',
+	},
+});
+
+
+globalStyle('.card',{
+	transition: 'opacity 0.3s ease, transform 0.2s ease',
+	opacity: '1', // Opacidade padrão
+});
