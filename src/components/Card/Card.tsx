@@ -17,9 +17,9 @@ export function Card({
 		<div className={`${cardContainer} ${cardDimmedOnHover} ${cardHighlighted}`}>
 			<span className={cardTimeContainer}>{startDate} — {endDate ?? 'Present'}</span>
 			<div className={cardContent}>
-				<span className={`${cardTitle} ${businessNameHover}`}>
+				<span className={`${cardTitle} `}>
 					{title}{' '}·{' '}
-					<a className={`${businessName} `}
+					<a className={`${businessName} ${businessNameHover}`}
 						target="_blank"
 						rel="noopener noreferrer"
 						href={businessURL}

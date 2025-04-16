@@ -1,8 +1,9 @@
 'use client';
 
+import { MdOutlineArrowOutward } from 'react-icons/md';
 import { Card } from '@/components/Card/Card';
 import Reveal from '@/components/Reveal/Reveal';
-import { asideContent, cardList, layoutContainer, mainContent, section } from './Home.css';
+import { asideContent, cardList, hoverYellow, layoutContainer, mainContent, section } from './Home.css';
 
 export default function Home() {
 	return (
@@ -52,6 +53,7 @@ export default function Home() {
 					</Reveal>
 				</section >
 				<div className={cardList}>
+
 					<Card
 						businessURL='https://userh.com.br/'
 						business='UseRH'
@@ -97,6 +99,22 @@ export default function Home() {
 							'Low code', 'RabbitMQ', 'Docker', 'Puppeteer', 'PostgreSQL', 'GIT', 'Unix'
 						]}
 					/>
+
+
+					<a
+						target="_blank"
+						rel="noopener noreferrer"
+						className={hoverYellow}
+						href='/resume.pdf'
+						style={{
+							fontWeight: 'bold',
+							cursor: 'pointer',
+							marginBottom: '1rem'
+						}}
+					>
+						Ver currículo{' '}
+						<MdOutlineArrowOutward />
+					</a>
 				</div>
 
 			</main>

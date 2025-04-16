@@ -53,17 +53,7 @@ export const cardTitle = style({
 export const businessName = style({
 	fontSize: vars.font.size.md,
 	fontWeight: 'bold',
-	color: 'inherit', 
-	textDecoration: 'none',
-	transition: 'color 0.2s ease',
-	':hover': {textDecoration: 'none',},
-	':visited': {color: 'inherit',},
-	':active': {color: 'inherit', },
-	':focus': {
-		color: 'inherit',
-		outline: 'none',
-	},
-	':focus-visible': {color: 'inherit',},
+
 });
 
 export const businessNameHover = style({selectors: {[`${cardContainer}:hover &`]: {color: '#d4a418', },},});

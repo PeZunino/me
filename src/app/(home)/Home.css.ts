@@ -1,4 +1,5 @@
 import { globalStyle, style } from '@vanilla-extract/css';
+import { vars } from '@/styles/theme/default.css';
 
 export const layoutContainer = style({
 
@@ -56,6 +57,7 @@ export const cardHighlighted = style({
 	},
 });
 
+export const hoverYellow = style({':hover':{color: vars.color.yellow500}});
 
 globalStyle('.card',{
 	transition: 'opacity 0.3s ease, transform 0.2s ease',

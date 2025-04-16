@@ -24,6 +24,18 @@ globalStyle('p',{fontSize: vars.font.size.md});
 
 globalStyle('span',{fontSize: vars.font.size.sm});
 
+globalStyle('a', {
+	color: 'inherit',
+	textDecoration: 'none',
+});
+
+globalStyle('a:hover', {textDecoration: 'none',});
+
+globalStyle('a:visited', {color: 'inherit',});
+
+globalStyle('a:focus', {outline: 'none',});
+
+globalStyle('a:focus-visible', {color: 'inherit',});
 
 globalStyle('body, input, textarea, button',{fontFamily: vars.font.family.manrope});
 
