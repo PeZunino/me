@@ -3,9 +3,25 @@
 import { MdOutlineArrowOutward } from 'react-icons/md';
 import { Card } from '@/components/Card/Card';
 import Reveal from '@/components/Reveal/Reveal';
+import info from '../../../experiences.json';
 import { asideContent, cardList, hoverYellow, layoutContainer, mainContent, section } from './Home.css';
 
+
+interface ExperienceInfo {
+	id: string,
+	businessURL: string,
+	business: string,
+	endDate: string,
+	startDate: string,
+	description: string,
+	title: string,
+	skills: string[]
+}
+
+
 export default function Home() {
+	const experiences: ExperienceInfo[] = info.experience;
+
 	return (
 		<div className={layoutContainer}>
 			<aside className={asideContent}>
@@ -53,54 +69,20 @@ export default function Home() {
 					</Reveal>
 				</section >
 				<div className={cardList}>
-
-					<Card
-						businessURL='https://userh.com.br/'
-						business='UseRH'
-						endDate='Jul 2024'
-						startDate='Set 2023'
-						description='Desenvolvimento de plataformas web para gestão de avaliações de desempenho, focado em UX/UI e lógica de backend no Mendix. Contribuí ativamente para melhorar a experiência do usuário e a organização da aplicação.'
-						title='Desenvolvedor Mendix'
-						skills={[
-							'Mendix', 'Low code', 'SCSS', 'HTML', 'UX/UI'
-						]}
-					/>
-					<Card
-						businessURL='#'
-						startDate='Jan 2023'
-						endDate='Mai 2023'
-						business='Freelancer'
-						description='Desenvolvimento de projetos web e mobile. Criação de site e compra de domínio, garantindo presença online.'
-						title='Desenvolvedor Web e Mobile'
-						skills={[
-							'React', 'React Native', 'Expo', 'Firebase', 'Typescript', 'UX/UI'
-						]}
-					/>
-					<Card
-						businessURL='https://www.groupws.com.br/'
-						endDate='Dez 2022'
-						startDate='Ago 2022'
-						business='Group WS'
-						description='Atuação no suporte à equipe de elétrica na escolha e implementação de sistemas de automação residencial e revisão de orçamentos.'
-						title='Assistente Administrativo de TI'
-						skills={[
-							'Zigbee', 'ELAN', 'IOT', 'Excel'
-						]}
-					/>
-					<Card
-						businessURL='https://joinsy.com.br/'
-						startDate='Nov 2018'
-						endDate='Jun 2022'
-						business='Joinsy'
-						description='Desenvolvimento e manutenção de automações para extração de dados de portais públicos e privados, otimizando processos de licitação.'
-						title='Desenvolvedor RPA / Web Crawling'
-						skills={[
-							'JavaScript', 'Typescript', 'Node.js', 'jQuery',
-							'Low code', 'RabbitMQ', 'Docker', 'Puppeteer', 'PostgreSQL', 'GIT', 'Unix'
-						]}
-					/>
-
-
+					{experiences.map(({
+						business, businessURL, description, endDate, skills, startDate, title, id
+					}) => (
+						<Card
+							key={id}
+							businessURL={businessURL}
+							business={business}
+							endDate={endDate}
+							startDate={startDate}
+							description={description}
+							title={title}
+							skills={skills}
+						/>
+					))}
 					<a
 						target="_blank"
 						rel="noopener noreferrer"
