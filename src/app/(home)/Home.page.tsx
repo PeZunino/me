@@ -109,6 +109,8 @@ export default function Home() {
 						style={{
 							fontWeight: 'bold',
 							cursor: 'pointer',
+							display: 'flex',
+							justifyContent: 'right',
 							marginBottom: '1rem'
 						}}
 					>
