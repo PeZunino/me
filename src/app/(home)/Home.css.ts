@@ -37,6 +37,8 @@ export const section = style({
 	marginBottom: '5rem',
 	lineHeight: '1.5rem',
 	paddingLeft: '1rem',
+
+	color: vars.color.gray,
 	'@media': {
 		'screen and (max-width: 1024px)': {
 			padding: '1rem 3rem',
