@@ -36,15 +36,15 @@ export default function Home() {
 				<main>
 					<section className={home__presentation_text}>
 						<p>
-							Sou
+							Sou{' '}
 						</p>
 						<Reveal label="DESENVOLVEDOR">
 							<p>
-								para me apresentar posso dizer que comecei com{' '}
+								{' '}para me apresentar posso dizer que comecei com{' '}
 							</p>
 							<Reveal dependsOnLabel='DESENVOLVEDOR' label='RPA'>
 								<p>
-									automatizando processos e coletas de dados de portais públicos e privados
+									{' '}automatizando processos e coletas de dados de portais públicos e privados
 								</p>
 							</Reveal>
 							<p>
@@ -52,26 +52,26 @@ export default function Home() {
 							</p>
 							<Reveal dependsOnLabel='DESENVOLVEDOR' label="JAVASCRIPT / TYPESCRIPT" >
 								<p>
-									, utilizando Node, jQuery, fazendo integrações de APIs, me interessei cada vez mais por web até cair de cabeça em stacks como
+									, utilizando Node, jQuery, fazendo integrações de APIs, me interessei cada vez mais por web até cair de cabeça em stacks como{' '}
 								</p>
 							</Reveal>
 						</Reveal>
 
 						<Reveal label="NEST/NEXT/EXPO">
 							<p>
-								foi aí que descobri meu lugar: criando do zero, colaborando com ideias,
+								{' '}foi aí que descobri meu lugar: criando do zero, colaborando com ideias,
 							</p>
 						</Reveal>
 						<p>
-							pensando em arquitetura e
+							pensando em arquitetura e{' '}
 						</p>
 						<Reveal label='BOAS PRÁTICAS'>
 							<p>
-								conhecendo mais sobre SDLC, arquitetura, patterns e abordagens como
+								{' '}conhecendo mais sobre SDLC, arquitetura, patterns e abordagens como{' '}
 							</p>
 							<Reveal dependsOnLabel='BOAS PRÁTICAS' label="TDD / DDD">
 								<p>
-									explorando formas de construir software com mais intenção, clareza e escala. Ainda tô absorvendo bastante coisa
+									{' '}explorando formas de construir software com mais intenção, clareza e escala. Ainda tô absorvendo bastante coisa{' '}
 								</p>
 							</Reveal>
 							<Reveal dependsOnLabel='BOAS PRÁTICAS' label="EM BREVE">
@@ -82,16 +82,16 @@ export default function Home() {
 							</Reveal>
 						</Reveal>
 						<p>
-							Moro em
+							Moro em{' '}
 						</p>
 						<Reveal label="ITAJAÍ">
 
 							<p>
-								, Santa Catarina. Você pode me achar no
+								, Santa Catarina. Você pode me achar no{' '}
 							</p>
 							<Reveal dependsOnLabel='ITAJAÍ' label="GITHUB">
 								<p>
-									ou LinkedIn
+									{' '}ou LinkedIn
 								</p>
 							</Reveal>
 						</Reveal>

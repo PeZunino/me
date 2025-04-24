@@ -12,7 +12,6 @@ export const revealButtonContainer = style({
 	
 	cursor: 'pointer',
 
-	// fontWeight: 'bold',
 	color: vars.color.white,
 
 	selectors: {
@@ -23,7 +22,6 @@ export const revealButtonContainer = style({
 			borderColor: vars.color.yellow500,
 		},	
 	},
-	'@media': {'screen and (max-width: 1024px)': {fontSize:'0.4rem'},},
 });
 
 export const revealContent = style({

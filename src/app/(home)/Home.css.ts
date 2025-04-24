@@ -6,7 +6,8 @@ export const home = style({
 	maxWidth: '1280px',
 	margin:'0 auto',
 	display: 'flex',
-	padding: '0rem 3rem'
+	padding: '0rem 3rem',
+	'@media': {'(max-width: 900px)': {flexDirection: 'column'}},
 });
 
 
@@ -17,12 +18,18 @@ export const home__header = style({
 	height: 'fit-content',
 	position: 'sticky',
 	top: '0',
+	'@media': {'(max-width: 900px)': {	position: 'inherit'}},
+
 });
 
 
 globalStyle(`${home__header} h1`,{width: 'max-content',});
 
-globalStyle(`${home} main`,{width: '60%',});
+globalStyle(`${home} main`,{
+	width: '60%',
+	'@media': {'(max-width: 900px)': {	width: '100%'}},
+
+});
 
 export const home__presentation_text = style({
 	marginBottom:'2rem',
