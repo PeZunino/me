@@ -6,6 +6,7 @@ export const home = style({
 	maxWidth: '1280px',
 	margin:'0 auto',
 	display: 'flex',
+	padding: '0rem 3rem'
 });
 
 
@@ -23,7 +24,15 @@ globalStyle(`${home__header} h1`,{width: 'max-content',});
 
 globalStyle(`${home} main`,{width: '60%',});
 
-globalStyle(`${home} main section`,{marginBottom:'2rem',});
+export const home__presentation_text = style({
+	marginBottom:'2rem',
+	lineHeight: '1.625',
+	color:vars.color.gray
+});
+
+globalStyle(`${home__presentation_text} p`,{display: 'inline',});
+
+globalStyle(`${home} main section`,{});
 
 export const home__resumeLink = style({':hover': {color: vars.color.yellow500}});
 

@@ -4,7 +4,7 @@ import { MdOutlineArrowOutward } from 'react-icons/md';
 import { Card } from '@/components/Card/Card';
 import Reveal from '@/components/Reveal/Reveal';
 import info from '../../../experiences.json';
-import { home, home__header, home__resumeLink } from './Home.css';
+import { home, home__header, home__presentation_text, home__resumeLink } from './Home.css';
 
 interface ExperienceInfo {
 	id: string,
@@ -34,38 +34,66 @@ export default function Home() {
 				</header>
 
 				<main>
-					<section>
-						Sou{' '}
+					<section className={home__presentation_text}>
+						<p>
+							Sou
+						</p>
 						<Reveal label="DESENVOLVEDOR">
-							{' '}para me apresentar posso dizer que comecei com{' '}
+							<p>
+								para me apresentar posso dizer que comecei com{' '}
+							</p>
 							<Reveal dependsOnLabel='DESENVOLVEDOR' label='RPA'>
-								{' '}automatizando processos e coletas de dados de portais públicos e privados
+								<p>
+									automatizando processos e coletas de dados de portais públicos e privados
+								</p>
 							</Reveal>
-
-							{' '}momento que conheci{' '}
+							<p>
+								momento que conheci
+							</p>
 							<Reveal dependsOnLabel='DESENVOLVEDOR' label="JAVASCRIPT / TYPESCRIPT" >
-								, utilizando Node, jQuery, fazendo integrações de APIs, me interessei cada vez mais por web até cair de cabeça em stacks como{' '}
+								<p>
+									, utilizando Node, jQuery, fazendo integrações de APIs, me interessei cada vez mais por web até cair de cabeça em stacks como
+								</p>
 							</Reveal>
 						</Reveal>
 
 						<Reveal label="NEST/NEXT/EXPO">
-							{' '}foi aí que descobri meu lugar: criando do zero, colaborando com ideias,
+							<p>
+								foi aí que descobri meu lugar: criando do zero, colaborando com ideias,
+							</p>
 						</Reveal>
-						pensando em arquitetura e{' '}
+						<p>
+							pensando em arquitetura e
+						</p>
 						<Reveal label='BOAS PRÁTICAS'>
-							{' '}conhecendo mais sobre SDLC, arquitetura, patterns e abordagens como{' '}
+							<p>
+								conhecendo mais sobre SDLC, arquitetura, patterns e abordagens como
+							</p>
 							<Reveal dependsOnLabel='BOAS PRÁTICAS' label="TDD / DDD">
-								{' '}explorando formas de construir software com mais intenção, clareza e escala. Ainda tô absorvendo bastante coisa{' '}
+								<p>
+									explorando formas de construir software com mais intenção, clareza e escala. Ainda tô absorvendo bastante coisa
+								</p>
 							</Reveal>
-							<Reveal dependsOnLabel='BOAS PRÁTICAS' label="EM BREVE">, talvez compartilhe por aqui o que ando aprendendo.
+							<Reveal dependsOnLabel='BOAS PRÁTICAS' label="EM BREVE">
+								<p>
+									, talvez compartilhe por aqui o que ando aprendendo.
+								</p>
 								<br />
 							</Reveal>
 						</Reveal>
-
-						Moro em{' '}
+						<p>
+							Moro em
+						</p>
 						<Reveal label="ITAJAÍ">
-							, Santa Catarina. Você pode me achar no{' '}
-							<Reveal dependsOnLabel='ITAJAÍ' label="GITHUB">{' '} ou LinkedIn</Reveal>
+
+							<p>
+								, Santa Catarina. Você pode me achar no
+							</p>
+							<Reveal dependsOnLabel='ITAJAÍ' label="GITHUB">
+								<p>
+									ou LinkedIn
+								</p>
+							</Reveal>
 						</Reveal>
 
 					</section >

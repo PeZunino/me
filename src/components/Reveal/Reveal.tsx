@@ -50,9 +50,11 @@ export default function Reveal({
 
 	return (
 		<>
+			{' '}
 			<button disabled={isLocked} className={revealButtonContainer} onClick={() => revealText()}>
 				{label}
 			</button >
+			{' '}
 			<div className={`${(isChildren ? (isLocked ? (!parentLabelIsVisible) : isVisible) : isVisible) ? revealContentRevealed : revealContentBlur} ${revealContent}`}>
 				{children}
 			</div>
