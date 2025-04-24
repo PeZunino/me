@@ -4,18 +4,17 @@ import { MdOutlineArrowOutward } from 'react-icons/md';
 import { Card } from '@/components/Card/Card';
 import Reveal from '@/components/Reveal/Reveal';
 import info from '../../../experiences.json';
-import { asideContent, cardList, hoverYellow, layoutContainer, mainContent, section } from './Home.css';
-
+import { asideContent, hoverYellow, layoutContainer, mainContent, section } from './Home.css';
 
 interface ExperienceInfo {
 	id: string,
-	businessURL: string,
+	skills: string[],
+	title: string,
+	description: string,
 	business: string,
 	endDate: string,
 	startDate: string,
-	description: string,
-	title: string,
-	skills: string[]
+	businessURL: string
 }
 
 
@@ -67,38 +66,49 @@ export default function Home() {
 					</Reveal>
 
 				</section >
-				<div className={cardList}>
+
+				<div className='list'>
+
+
 					{experiences.map(({
-						business, businessURL, description, endDate, skills, startDate, title, id
+						business, businessURL, description, endDate, id, skills, startDate, title
 					}) => (
 						<Card
 							key={id}
-							businessURL={businessURL}
+							leftSide={
+								{
+									time: {
+										startDate,
+										endDate
+									},
+									img: ''
+								}
+							}
+							url={businessURL}
 							business={business}
-							endDate={endDate}
-							startDate={startDate}
 							description={description}
 							title={title}
 							skills={skills}
 						/>
 					))}
-					<a
-						target="_blank"
-						rel="noopener noreferrer"
-						className={hoverYellow}
-						href='/resume.pdf'
-						style={{
-							fontWeight: 'bold',
-							cursor: 'pointer',
-							display: 'flex',
-							justifyContent: 'right',
-							marginBottom: '1rem'
-						}}
-					>
-						Ver currículo{' '}
-						<MdOutlineArrowOutward />
-					</a>
 				</div>
+
+				<a
+					target="_blank"
+					rel="noopener noreferrer"
+					className={hoverYellow}
+					href='/resume.pdf'
+					style={{
+						fontWeight: 'bold',
+						cursor: 'pointer',
+						display: 'flex',
+						justifyContent: 'right',
+						marginBottom: '1rem'
+					}}
+				>
+					Ver currículo{' '}
+					<MdOutlineArrowOutward />
+				</a>
 
 			</main>
 

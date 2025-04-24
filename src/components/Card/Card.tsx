@@ -1,41 +1,72 @@
-import { businessName, businessNameHover, cardContainer, cardContent, cardDescription, cardDimmedOnHover, cardHighlighted, cardTimeContainer, cardTitle, skillContainer, skillList } from './Card.css';
+import Image from 'next/image';
+import { container } from './Card.css';
+interface Time {
+	endDate: string,
+	startDate: string
+}
+
+interface LeftSide {
+	time?: Time,
+	img: string
+}
 
 interface CardProps {
-	skills: string[],
+	leftSide: LeftSide
 	title: string,
 	description: string,
-	business: string,
-	startDate: string,
-	endDate: string,
-	businessURL: string
+	url: string
+	skills?: string[],
+	business?: string,
 }
 
 export function Card({
-	skills, title, description, business, endDate, startDate, businessURL
+	leftSide, business, url, description, skills, title
 }: CardProps) {
 	return (
-		<div className={`${cardContainer} ${cardDimmedOnHover} ${cardHighlighted}`}>
-			<span className={cardTimeContainer}>{startDate} — {endDate ?? 'Present'}</span>
-			<div className={cardContent}>
-				<span className={`${cardTitle} `}>
-					{title}{' '}·{' '}
-					<a className={`${businessName} ${businessNameHover}`}
-						target="_blank"
-						rel="noopener noreferrer"
-						href={businessURL}
-					>
-						{business}
-					</a>
+		<div
+			className={container}
+		>
+			{leftSide.time
+				?
+				<span className='time'>
+					{leftSide.time.startDate} — {leftSide.time.endDate ?? 'Present'}
 				</span>
+				: <Image src={leftSide.img} alt='' />
+			}
 
-				<p className={cardDescription}>
+			<div>
+
+				<a className='title'
+					target="_blank"
+					rel="noopener noreferrer"
+					href={url}
+
+				>
+					{title}
+					{business && (
+						` · ${business}`
+					)}
+
+
+				</a>
+
+				<p className='description'>
 					{description}
 				</p>
-				<ul className={skillList}>
-					{skills.map(skill => <li className={skillContainer} key={skill}>{skill}</li>)}
 
-				</ul>
+
+				{skills && (
+					<ul className="skill_list">
+						{skills.map(skill => (
+							<li className='skill' key={skill}>
+								{skill}
+							</li>
+						))}
+					</ul>
+				)}
+
 			</div>
+
 		</div>
 	);
 }

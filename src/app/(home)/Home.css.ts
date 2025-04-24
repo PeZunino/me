@@ -48,20 +48,50 @@ export const section = style({
 	}
 });
 
-export const cardList = style({});
 
-export const cardDimmedOnHover = style({selectors: {[`${cardList}:hover &:not(:hover)`]: {opacity: '0.5',},},});
-
-export const cardHighlighted = style({
-	':hover': {
-		opacity: '1 !important',
-		transform: 'scale(1.02)',
-	},
-});
 
 export const hoverYellow = style({':hover':{color: vars.color.yellow500}});
 
-globalStyle('.card',{
-	transition: 'opacity 0.3s ease, transform 0.2s ease',
-	opacity: '1', // Opacidade padrão
+// globalStyle('.card',{
+// 	transition: 'opacity 0.3s ease, transform 0.2s ease',
+// 	opacity: '1', // Opacidade padrão
+// });
+
+
+
+export const cardContainer = style({
+	padding: '1rem',
+	marginBottom: '2rem',
+	
+	display:'flex',
+	border: '1px solid transparent',
+	
+	cursor: 'pointer',
+	
+	transition: 'all 0.2s ease-in-out',
+	
+	opacity: '1',
+
+	selectors:{
+		'&:hover':{
+			background: ' rgba(150, 150, 150, 0.1);',
+			borderRadius:' 10px',
+			border: '1px solid rgba( 255, 255, 255, 0.18 )',
+			opacity: '1 !important',
+			transform: 'scale(1.02)',
+		},
+		['.list:hover &:not(:hover)']: {opacity: '0.5',},
+		['.list:hover &:hover']: {color: vars.color.yellow500,},
+
+	},
+
+});
+
+
+export const cardTimeContainer = style({
+	width:'25%',
+	fontWeight:'bold',
+	color: vars.color.gray,
+	marginTop: '0.25rem'
+
 });
