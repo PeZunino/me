@@ -13,7 +13,10 @@ const manrope = Manrope({
 });
 
 
-export const metadata: Metadata = { title: 'Pedro Zunino', };
+export const metadata: Metadata = {
+	title: 'Pedro Zunino',
+	icons: { icon: '/icon.JPG', },
+};
 
 export default function RootLayout({ children, }: Readonly<{
 	children: React.ReactNode;
