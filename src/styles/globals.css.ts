@@ -31,11 +31,17 @@ globalStyle('p',{
 	'@media': {'(max-width: 900px)': {fontSize: '16px'}},
 });
 
-globalStyle('span',{fontSize: vars.font.size.sm});
+globalStyle('span',{
+	fontSize: vars.font.size.sm,
+	'@media': {'(max-width: 900px)': {fontSize: '12px'}},
+
+});
 
 globalStyle('a', {
 	color: 'inherit',
 	textDecoration: 'none',
+	'@media': {'(max-width: 900px)': {fontSize: '16px'}},
+
 });
 
 globalStyle('a:hover', {textDecoration: 'none',});

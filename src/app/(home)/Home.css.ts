@@ -34,7 +34,9 @@ globalStyle(`${home} main`,{
 export const home__presentation_text = style({
 	marginBottom:'2rem',
 	lineHeight: '1.625',
-	color:vars.color.gray
+	color:vars.color.gray,
+	'@media': {'(max-width: 900px)': {	marginBottom: '8rem'}},
+
 });
 
 globalStyle(`${home__presentation_text} p`,{display: 'inline',});

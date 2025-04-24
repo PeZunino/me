@@ -59,7 +59,10 @@ export function Card({
 					<ul className="skill_list">
 						{skills.map(skill => (
 							<li className='skill' key={skill}>
-								{skill}
+								<span>
+
+									{skill}
+								</span>
 							</li>
 						))}
 					</ul>
