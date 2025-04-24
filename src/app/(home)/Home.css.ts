@@ -1,54 +1,29 @@
 import { globalStyle, style } from '@vanilla-extract/css';
 import { vars } from '@/styles/theme/default.css';
 
-export const layoutContainer = style({
 
-	height: '100vh',
-
-	position: 'absolute',
-	overflow: 'hidden',
-	
-});
-
-export const asideContent = style({
-	paddingTop: '6rem',
-	paddingLeft: '4rem',
-
-	position: 'relative',
-	float: 'left'
-
-});
-
-globalStyle(`${asideContent} h1`,{lineHeight: 1});
-
-export const mainContent = style({
-	width:'60%',
-	height: '100%',
-	paddingTop: '6rem',
-	paddingRight: '4rem',
-	paddingLeft:'6rem',
-	position: 'relative',
-	overflow:'scroll',
-	float: 'right',
-
-});
-
-export const section = style({
-	marginBottom: '5rem',
-	lineHeight: '1.5rem',
-	paddingLeft: '1rem',
-
-	color: vars.color.gray,
-	'@media': {
-		'screen and (max-width: 1024px)': {
-			padding: '1rem 3rem',
-			fontSize:'0.7rem',
-			lineHeight: '1.5rem'
-		},
-	}
+export const home = style({
+	maxWidth: '1280px',
+	margin:'0 auto',
+	display: 'flex',
 });
 
 
+globalStyle(`${home} >*`,{paddingTop:'6rem',});
 
-export const hoverYellow = style({':hover':{color: vars.color.yellow500}});
+export const home__header = style({
+	flex:'1',
+	height: 'fit-content',
+	position: 'sticky',
+	top: '0',
+});
+
+
+globalStyle(`${home__header} h1`,{width: 'max-content',});
+
+globalStyle(`${home} main`,{width: '60%',});
+
+globalStyle(`${home} main section`,{marginBottom:'2rem',});
+
+export const home__resumeLink = style({':hover': {color: vars.color.yellow500}});
 
