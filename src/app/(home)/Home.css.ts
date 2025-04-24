@@ -30,7 +30,10 @@ export const home__header = style({
 
 });
 
-globalStyle(`${home__header} h1`,{width: 'max-content',});
+globalStyle(`${home__header} h1`,{
+	width: 'max-content',
+	lineHeight: '1'
+});
 
 globalStyle(`${home__header} h2`,{
 	marginTop: '0.75rem',
