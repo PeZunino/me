@@ -8,7 +8,6 @@ import info from '../../../experiences.json';
 import { home, home__header, home__presentation_text, home__resumeLink } from './Home.css';
 
 interface ExperienceInfo {
-	id: string,
 	skills: string[],
 	title: string,
 	description: string,
@@ -133,10 +132,10 @@ export default function Home() {
 
 
 						{experiences.map(({
-							business, businessURL, description, endDate, id, skills, startDate, title
+							business, businessURL, description, endDate, skills, startDate, title
 						}) => (
 							<Card
-								key={id}
+								key={`${endDate}-${businessURL}`}
 								leftSide={
 									{
 										time: {
