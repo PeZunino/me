@@ -5,7 +5,9 @@ import { MdOutlineArrowOutward } from 'react-icons/md';
 import { Card } from '@/components/Card/Card';
 import Reveal from '@/components/Reveal/Reveal';
 import info from '../../../experiences.json';
-import { home, home__header, home__presentation_text, home__resumeLink } from './Home.css';
+import { home, home__resumeLink } from './Home.css';
+import HomeHeader from './header/HomeHeader';
+import PresentationSection from './presentationSection/PresentationSection';
 
 interface ExperienceInfo {
 	skills: string[],
@@ -26,111 +28,12 @@ export default function Home() {
 
 			<div className={home}>
 
-				<header className={home__header}>
-					<h1>Pedro Zunino</h1>
-					<h2>Desenvolvedor fullstack</h2>
-					<p>
-						Transformo ideias em aplicações robustas, escaláveis e integradas — rápidas, limpas e prontas para prod
-					</p>
-					<div>
-						<a
-							target="_blank"
-							rel="noopener noreferrer"
-							href="https://github.com/PeZunino"
-							title="PeZunino"
-
-						>
-							<IoLogoGithub size={24} />
-						</a>
-						<a
-							target="_blank"
-							rel="noopener noreferrer"
-							href="mailto:pedrozunino.santos@email.com"
-							title="pedrozunino.santos@email.com"
-
-						>
-							<IoMdMail size={24} />
-						</a>
-						<a
-							target="_blank"
-							rel="noopener noreferrer"
-							href="https://www.linkedin.com/in/pedro-zunino-dos-santos-0880bb188?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
-							title="Pedro Zunino dos Santos"
-
-						>
-							<IoLogoLinkedin size={24} />
-						</a>
-					</div>
-				</header>
+				<HomeHeader/>
 
 				<main>
-					<section className={home__presentation_text}>
-						<p>
-							Sou{' '}
-						</p>
-						<Reveal label="DESENVOLVEDOR">
-							<p>
-								{' '}para me apresentar posso dizer que comecei com{' '}
-							</p>
-							<Reveal dependsOnLabel='DESENVOLVEDOR' label='RPA'>
-								<p>
-									{' '}automatizando processos e coletas de dados de portais públicos e privados
-								</p>
-							</Reveal>
-							<p>
-								momento que conheci
-							</p>
-							<Reveal dependsOnLabel='DESENVOLVEDOR' label="JAVASCRIPT / TYPESCRIPT" >
-								<p>
-									, utilizando Node, jQuery, fazendo integrações de APIs, me interessei cada vez mais por web até cair de cabeça em stacks como{' '}
-								</p>
-							</Reveal>
-						</Reveal>
-
-						<Reveal label="NEST/NEXT/EXPO">
-							<p>
-								{' '}foi aí que descobri meu lugar: criando do zero, colaborando com ideias,
-							</p>
-						</Reveal>
-						<p>
-							pensando em arquitetura e{' '}
-						</p>
-						<Reveal label='BOAS PRÁTICAS'>
-							<p>
-								{' '}conhecendo mais sobre SDLC, arquitetura, patterns e abordagens como{' '}
-							</p>
-							<Reveal dependsOnLabel='BOAS PRÁTICAS' label="TDD / DDD">
-								<p>
-									{' '}explorando formas de construir software com mais intenção, clareza e escala. Ainda tô absorvendo bastante coisa{' '}
-								</p>
-							</Reveal>
-							<Reveal dependsOnLabel='BOAS PRÁTICAS' label="EM BREVE">
-								<p>
-									, talvez compartilhe por aqui o que ando aprendendo.
-								</p>
-								<br />
-							</Reveal>
-						</Reveal>
-						<p>
-							Moro em{' '}
-						</p>
-						<Reveal label="ITAJAÍ">
-
-							<p>
-								, Santa Catarina. Você pode me achar no{' '}
-							</p>
-							<Reveal dependsOnLabel='ITAJAÍ' label="GITHUB">
-								<p>
-									{' '}ou LinkedIn
-								</p>
-							</Reveal>
-						</Reveal>
-
-					</section >
+					<PresentationSection/>
 
 					<div className='list'>
-
-
 						{experiences.map(({
 							business, businessURL, description, endDate, skills, startDate, title
 						}) => (
