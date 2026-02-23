@@ -1,24 +1,26 @@
 'use client';
 
-import { MdOutlineArrowOutward } from 'react-icons/md';
-import { homePresentationText, home__resumeLink, homeContentContainer, leftSideContent, rightContent } from './Home.css';
-import HomeHeader from './header/HomeHeader';
-import ExperienceList from './experienceList/ExperienceList';
 import { useEffect } from 'react';
+import { MdOutlineArrowOutward } from 'react-icons/md';
 import { vars } from '@/styles/theme/default.css';
+import ExperienceList from './experienceList/ExperienceList';
+import HomeHeader from './header/HomeHeader';
+import { home__resumeLink, homeContentContainer, homePresentationText, leftSideContent, rightContent } from './Home.css';
 
 
 export default function Home() {
 	useEffect(() => {
-  const handleMove = (e: MouseEvent) => {
-    document.documentElement.style.setProperty('--x', `${e.clientX}px`);
-    document.documentElement.style.setProperty('--y', `${e.clientY}px`);
-  };
+		const handleMove = (e: MouseEvent) => {
+			document.documentElement.style.setProperty('--x', `${e.clientX}px`);
 
-  window.addEventListener('mousemove', handleMove);
+			document.documentElement.style.setProperty('--y', `${e.clientY}px`);
+		};
 
-  return () => window.removeEventListener('mousemove', handleMove);
-}, []);
+		window.addEventListener('mousemove', handleMove);
+
+		return () => window.removeEventListener('mousemove', handleMove);
+	}, []);
+
 	return (
 
 		<div className={homeContentContainer}>
