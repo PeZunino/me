@@ -5,6 +5,7 @@ globalStyle('body::before', {
   content: '',
   position: 'fixed',
   inset: 0,
+	zIndex: 0,
   pointerEvents: 'none',
   background: `
     radial-gradient(
@@ -27,9 +28,12 @@ globalStyle('html', {
 
 globalStyle('body', {
   color: vars.color.white,
-
 	backgroundColor: vars.color.black,
-  fontFamily: vars.font.family.manrope,
+  
+	position: 'relative',
+  zIndex: 1,
+
+	fontFamily: vars.font.family.manrope,
   fontWeight: vars.font.weight.md,
 });
 

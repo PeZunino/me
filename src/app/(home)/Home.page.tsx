@@ -5,6 +5,7 @@ import { homePresentationText, home__resumeLink, homeContentContainer, leftSideC
 import HomeHeader from './header/HomeHeader';
 import ExperienceList from './experienceList/ExperienceList';
 import { useEffect } from 'react';
+import { vars } from '@/styles/theme/default.css';
 
 
 export default function Home() {
@@ -29,21 +30,19 @@ export default function Home() {
 
 				<section className={homePresentationText}>
 					<p>
-						Sou desenvolvedor com foco em backend e integrações web.
-						Iniciei minha trajetória automatizando processos e realizando coletas de dados em portais públicos e privados, utilizando 
-						Node.js, jQuery e integrações com APIs.
+						Iniciei minha trajetória <strong style={{color:vars.color.white}}>automatizando</strong> coletas de dados e processos em portais públicos e privados, 
+						utilizando Node.js, jQuery e integrações com APIs.
 					</p>
 					<p>
-						Com o tempo, ampliei meu interesse pelo desenvolvimento web de forma mais estruturada, explorando stacks modernas e
-						 aprofundando meus conhecimentos em arquitetura de software, organização de código e ciclo de vida de desenvolvimento (SDLC).
+						Com o tempo, ampliei meu foco para o <strong style={{color:vars.color.white}}>desenvolvimento web</strong>, explorando stacks modernas e aprofundando 
+						meus conhecimentos em arquitetura de software e organização de código.
 					</p>
 					<p>
-						Tenho interesse em construir aplicações bem estruturadas, com responsabilidades claras e foco em
-						 evolução contínua. Sigo estudando e aplicando boas práticas para desenvolver software com mais intenção, 
-						 clareza e escalabilidade.
+						Busco construir aplicações bem estruturadas, com responsabilidades claras e foco em <strong style={{color:vars.color.white}}>evolução contínua</strong>. 
+						Tenho interesse em desenvolver software com mais clareza, consistência e escalabilidade.
 					</p>
 					<p>
-						Moro em Itajaí, Santa Catarina. Você pode me encontrar no GitHub ou no LinkedIn.
+						Moro em Itajaí, Santa Catarina.
 					</p>
 
 				</section >

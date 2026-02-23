@@ -3,7 +3,7 @@ import { createGlobalTheme } from '@vanilla-extract/css';
 export const vars = createGlobalTheme(':root',{
 	color: {
 		white: '#d6dfee',
-		black: '#1b1b1b',
+		black: '#0F0E0E',
 		gray: '#9ca3af',
 		yellow400:'rgba(212, 164, 24, 0.1)',
 		yellow500:'#d4a418'

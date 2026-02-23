@@ -8,9 +8,8 @@ export const homeContentContainer = style({
 	justifyContent: 'space-between',
 
 	'@media': {
-		'(max-width: 900px)': {
+		'(max-width: 1308px)': {
 			flexDirection: 'column',
-			padding: '0rem 6rem',
 
 		}
 	},
@@ -21,21 +20,34 @@ export const leftSideContent = style({
   alignSelf: 'flex-start',
 	position: 'sticky',
 	top: '6rem',
+
+	
+	'@media': {
+	'(max-width: 1308px)': {
+		position: 'relative',
+
+	}}
+
 })
 
 export const rightContent = style({
 	paddingTop: '6rem',
   maxWidth: '40rem',
   flex: '1',
-})
+
+	'@media': {
+	'(max-width: 1308px)': {
+		maxWidth: 'none',
+		paddingTop: '2rem',
+	}
+}})
 export const homePresentationText = style({
 	marginBottom:'2rem',
 	lineHeight: '1.625',
 	color:vars.color.gray,
 	'@media': {
-		'(max-width: 900px)': {
+		'(max-width: 1308px)': {
 			marginBottom: '8rem',
-			marginTop: '10rem'
 		}
 	},
 

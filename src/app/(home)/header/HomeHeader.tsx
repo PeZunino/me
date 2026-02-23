@@ -6,9 +6,9 @@ export default function HomeHeader(){
   return (
       <>
       <h1>Pedro Zunino</h1>
-      <h2>Desenvolvedor fullstack</h2>
+      <h2>Desenvolvedor Web</h2>
       <p className={subtitle}>
-        Desenvolvedor Web com experiência em automações e APIs
+        Experiência em automações, integrações e frontend
       </p>
       
       <div className={linksContainer}>

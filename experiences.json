@@ -5,14 +5,15 @@
       "business": "UseRH",
       "endDate": "Jul 2024",
       "startDate": "Set 2023",
-      "description": "Desenvolvimento de plataformas web para gestão de processos seletivos, implementação de telas responsivas com SCSS e lógica de backend no Mendix.",
+      "description": "Desenvolvimento de telas responsivas com SCSS e implementação de regras de negócio nos fluxos backend em Mendix.",
       "title": "Desenvolvedor Mendix",
       "skills": [
         "Mendix",
         "Low code",
         "SCSS",
         "HTML",
-        "UX/UI"
+        "UX/UI",
+        "Git"
       ]
     },
     {
@@ -20,15 +21,17 @@
       "startDate": "Jan 2023",
       "endDate": "Mai 2023",
       "business": "Freelancer",
-      "description": "Desenvolvimento de projetos web e mobile com React e Typescript. Levantamento de requisitos, interfaces e desenvolvimento mobile com Expo.",
+      "description": "Desenvolvimento de projetos web e mobile com React, Node.js e Typescript. Levantamento de requisitos, interfaces e desenvolvimento mobile com Expo.",
       "title": "Desenvolvedor Web e Mobile",
       "skills": [
         "React",
-        "React Native",
+        "Node.js",
         "Expo",
         "Firebase",
         "Typescript",
-        "UX/UI"
+        "CSS",
+        "UX/UI",
+        "Git"
       ]
     },
     {
@@ -39,7 +42,7 @@
       "description": "Suporte na escolha e implementação de sistemas de automação residencial e revisão de orçamentos.",
       "title": "Assistente de TI",
       "skills": [
-        "IOT",
+        "IoT",
         "Excel"
       ]
     },
@@ -48,19 +51,16 @@
       "startDate": "Nov 2018",
       "endDate": "Jun 2022",
       "business": "Joinsy",
-      "description": "Desenvolvimento e manutenção de automações para extração de dados e participação em processos licitatórios de portais públicos e privados",
+      "description": "Desenvolvimento e manutenção de automações para extração de dados e participação em processos licitatórios de portais públicos e privados.",
       "title": "Desenvolvedor RPA / Web Crawling",
       "skills": [
         "JavaScript",
         "Typescript",
         "Node.js",
-        "jQuery",
-        "Low cde",
         "RabbitMQ",
         "Docker",
-        "Puppeteer",
         "PostgreSQL",
-        "GIT",
+        "Git",
         "Unix"
       ]
     }
