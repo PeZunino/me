@@ -16,6 +16,7 @@ globalStyle('body', {
 globalStyle('h1',{
 	fontSize: vars.font.size.xxl,
 	fontWeight: vars.font.weight.xl,
+	color: vars.color.white,
 	'@media': {'(max-width: 900px)': {fontSize: '36px'}},
 });
 
@@ -28,6 +29,7 @@ globalStyle('h2',{
 
 globalStyle('p',{
 	fontSize: vars.font.size.md,
+	marginBottom: '1rem',
 	'@media': {'(max-width: 900px)': {fontSize: '16px'}},
 });
 
@@ -45,8 +47,6 @@ globalStyle('a', {
 });
 
 globalStyle('a:hover', {textDecoration: 'none',});
-
-globalStyle('a:visited', {color: 'inherit',});
 
 globalStyle('a:focus', {outline: 'none',});
 

@@ -1,83 +1,66 @@
 'use client';
 
-import { IoLogoGithub, IoLogoLinkedin, IoMdMail } from 'react-icons/io';
 import { MdOutlineArrowOutward } from 'react-icons/md';
-import { Card } from '@/components/Card/Card';
-import Reveal from '@/components/Reveal/Reveal';
-import info from '../../../experiences.json';
-import { home, home__resumeLink } from './Home.css';
+import { homePresentationText, home__resumeLink, homeContentContainer, leftSideContent, rightContent } from './Home.css';
 import HomeHeader from './header/HomeHeader';
-import PresentationSection from './presentationSection/PresentationSection';
-
-interface ExperienceInfo {
-	skills: string[],
-	title: string,
-	description: string,
-	business: string,
-	endDate: string,
-	startDate: string,
-	businessURL: string
-}
+import ExperienceList from './experienceList/ExperienceList';
 
 
 export default function Home() {
-	const experiences: ExperienceInfo[] = info.experience;
 
 	return (
-		<div>
 
-			<div className={home}>
-
+		<div className={homeContentContainer}>
+			<aside className={leftSideContent}>
 				<HomeHeader/>
+			</aside>
 
-				<main>
-					<PresentationSection/>
+			<main className={rightContent}>
 
-					<div className='list'>
-						{experiences.map(({
-							business, businessURL, description, endDate, skills, startDate, title
-						}) => (
-							<Card
-								key={`${endDate}-${businessURL}`}
-								leftSide={
-									{
-										time: {
-											startDate,
-											endDate
-										},
-										img: ''
-									}
-								}
-								url={businessURL}
-								business={business}
-								description={description}
-								title={title}
-								skills={skills}
-							/>
-						))}
-					</div>
+				<section className={homePresentationText}>
+					<p>
+						Sou desenvolvedor com foco em backend e integrações web.
+						Iniciei minha trajetória automatizando processos e realizando coletas de dados em portais públicos e privados, utilizando 
+						Node.js, jQuery e integrações com APIs.
+					</p>
+					<p>
+						Com o tempo, ampliei meu interesse pelo desenvolvimento web de forma mais estruturada, explorando stacks modernas e
+						 aprofundando meus conhecimentos em arquitetura de software, organização de código e ciclo de vida de desenvolvimento (SDLC).
+					</p>
+					<p>
+						Tenho interesse em construir aplicações bem estruturadas, com responsabilidades claras e foco em
+						 evolução contínua. Sigo estudando e aplicando boas práticas para desenvolver software com mais intenção, 
+						 clareza e escalabilidade.
+					</p>
+					<p>
+						Moro em Itajaí, Santa Catarina. Você pode me encontrar no GitHub ou no LinkedIn.
+					</p>
 
-					<a
-						target="_blank"
-						rel="noopener noreferrer"
-						className={home__resumeLink}
-						href='/resume.pdf'
-						style={{
-							fontWeight: 'bold',
-							cursor: 'pointer',
-							display: 'flex',
-							justifyContent: 'right',
-							marginBottom: '1rem'
-						}}
-					>
-						Ver currículo{' '}
-						<MdOutlineArrowOutward />
-					</a>
+				</section >
 
-				</main>
-			</div>
+				
+				<ExperienceList/>
+				
+				<a
+					target="_blank"
+					rel="noopener noreferrer"
+					className={home__resumeLink}
+					href='/resume.pdf'
+					style={{
+						fontWeight: 'bold',
+						cursor: 'pointer',
+						display: 'flex',
+						justifyContent: 'right',
+						marginBottom: '1rem'
+					}}
+				>
+					Ver currículo{' '}
+					<MdOutlineArrowOutward />
+				</a>
 
-		</div >
+			</main>
+		</div>
+
 
 	);
 }

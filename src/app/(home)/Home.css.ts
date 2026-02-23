@@ -2,11 +2,11 @@ import { globalStyle, style } from '@vanilla-extract/css';
 import { vars } from '@/styles/theme/default.css';
 
 
-export const home = style({
-	maxWidth: '1280px',
-	margin:'0 auto',
+export const homeContentContainer = style({
+	padding: '0 8rem 0 10rem',
 	display: 'flex',
-	padding: '0rem 3rem',
+	justifyContent: 'space-between',
+
 	'@media': {
 		'(max-width: 900px)': {
 			flexDirection: 'column',
@@ -16,18 +16,30 @@ export const home = style({
 	},
 });
 
+export const leftSideContent = style({
+	flex: '0 0 20rem',
+  alignSelf: 'flex-start',
+	position: 'sticky',
+	top: '6rem',
+})
 
-globalStyle(`${home} >*`,{paddingTop:'6rem',});
-
-
-
-globalStyle(`${home} main`,{
-	width: '60%',
-	'@media': {'(max-width: 900px)': {	width: '100%'}},
+export const rightContent = style({
+	paddingTop: '6rem',
+  maxWidth: '40rem',
+  flex: '1',
+})
+export const homePresentationText = style({
+	marginBottom:'2rem',
+	lineHeight: '1.625',
+	color:vars.color.gray,
+	'@media': {
+		'(max-width: 900px)': {
+			marginBottom: '8rem',
+			marginTop: '10rem'
+		}
+	},
 
 });
-
-
 
 export const home__resumeLink = style({':hover': {color: vars.color.yellow500}});
 
