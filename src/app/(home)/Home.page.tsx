@@ -56,7 +56,7 @@ export default function Home() {
 					target="_blank"
 					rel="noopener noreferrer"
 					className={home__resumeLink}
-					href='/resume-v2.pdf'
+					href='/PedroZunino_Curriculo.pdf'
 					style={{
 						fontWeight: 'bold',
 						cursor: 'pointer',
