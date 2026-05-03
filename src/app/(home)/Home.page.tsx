@@ -32,22 +32,22 @@ export default function Home() {
 
 				<section className={homePresentationText}>
 					<p>
-						Iniciei minha trajetória <strong style={{color:vars.color.white}}>automatizando</strong> coletas de dados e processos em portais públicos e privados, 
-						utilizando Node.js, jQuery e integrações com APIs.
+						Comecei <strong style={{color:vars.color.white}}>automatizando</strong> coletas em portais públicos e privados com Node.js
+						e filas em RabbitMQ, orquestrando dezenas de robôs em paralelo.
 					</p>
 					<p>
-						Com o tempo, ampliei meu foco para o <strong style={{color:vars.color.white}}>desenvolvimento web</strong>, explorando stacks modernas e aprofundando 
-						meus conhecimentos em arquitetura de software e organização de código.
+						Hoje construo <strong style={{color:vars.color.white}}>APIs REST em NestJS</strong> com DDD e Clean Architecture sobre
+						PostgreSQL e MongoDB, processamento assíncrono em BullMQ e interfaces em Next.js.
 					</p>
 					<p>
-						Busco construir aplicações bem estruturadas, com responsabilidades claras e foco em <strong style={{color:vars.color.white}}>evolução contínua</strong>. 
-						Tenho interesse em desenvolver software com mais clareza, consistência e escalabilidade.
+						Já levei sistemas <strong style={{color:vars.color.white}}>do levantamento ao deploy</strong>: chat corporativo em RocketChat
+						via DDP, mail server próprio (SMTP/IMAP, SPF/DKIM/DMARC) e infra em Docker com Traefik.
 					</p>
 					<p>
 						Moro em Itajaí, Santa Catarina.
 					</p>
+				</section>
 
-				</section >
 
 				
 				<ExperienceList/>

@@ -1,12 +1,52 @@
 {
   "experience": [
     {
+      "businessURL": "#",
+      "business": "Indaiá Eventos",
+      "startDate": "Mar 2026",
+      "endDate": "Mai 2026",
+      "title": "Desenvolvedor Fullstack",
+      "description": "Atuei do levantamento de requisitos ao deploy. API REST em NestJS (DDD, Clean Architecture) sobre PostgreSQL/Prisma, filas BullMQ com retry exponencial e DLQ, chat corporativo em RocketChat via DDP, mail server MOX com SMTP/IMAP e DNS (SPF/DKIM/DMARC), tudo em Docker/Traefik com CI/CD.",
+      "skills": [
+        "NestJS",
+        "Node.js",
+        "TypeScript",
+        "Next.js",
+        "PostgreSQL",
+        "Prisma",
+        "MongoDB",
+        "BullMQ",
+        "Redis",
+        "RabbitMQ",
+        "Docker",
+        "Traefik",
+        "SMTP",
+        "IMAP",
+        "DDD",
+        "TDD",
+        "Jest"
+      ]
+    },
+    {
+      "businessURL": "#",
+      "business": "Grupo Nelson Heusi",
+      "startDate": "Set 2025",
+      "endDate": "Fev 2026",
+      "title": "Assistente de Importação",
+      "description": "Gestão de processos de importação marítima e aérea, documentação e comunicação com fornecedores internacionais.",
+      "skills": [
+        "Inglês",
+        "Excel",
+        "Comex"
+      ]
+    },
+    {
       "businessURL": "https://userh.com.br/",
       "business": "UseRH",
-      "endDate": "Jul 2024",
       "startDate": "Set 2023",
-      "description": "Desenvolvimento de telas responsivas com SCSS e implementação de regras de negócio nos fluxos backend em Mendix.",
+      "endDate": "Jul 2024",
       "title": "Desenvolvedor Mendix",
+      "description": "Telas responsivas em SCSS e regras de negócio em fluxos backend Mendix.",
       "skills": [
         "Mendix",
         "Low code",
@@ -18,29 +58,28 @@
     },
     {
       "businessURL": "#",
+      "business": "Freelancer",
       "startDate": "Jan 2023",
       "endDate": "Mai 2023",
-      "business": "Freelancer",
-      "description": "Desenvolvimento de projetos web e mobile com React, Node.js e Typescript. Levantamento de requisitos, interfaces e desenvolvimento mobile com Expo.",
       "title": "Desenvolvedor Web e Mobile",
+      "description": "App mobile em React Native (Expo) + TypeScript integrado a Firebase. Landing page em Next.js com captura de leads por e-mail.",
       "skills": [
-        "React",
-        "Node.js",
+        "React Native",
         "Expo",
+        "TypeScript",
+        "Next.js",
         "Firebase",
-        "Typescript",
         "CSS",
-        "UX/UI",
         "Git"
       ]
     },
     {
       "businessURL": "https://www.groupws.com.br/",
-      "endDate": "Dez 2022",
-      "startDate": "Ago 2022",
       "business": "Group WS",
-      "description": "Suporte na escolha e implementação de sistemas de automação residencial e revisão de orçamentos.",
+      "startDate": "Ago 2022",
+      "endDate": "Dez 2022",
       "title": "Assistente de TI",
+      "description": "Suporte na escolha e implementação de sistemas de automação residencial e revisão de orçamentos.",
       "skills": [
         "IoT",
         "Excel"
@@ -48,20 +87,20 @@
     },
     {
       "businessURL": "https://joinsy.com.br/",
+      "business": "Joinsy",
       "startDate": "Nov 2018",
       "endDate": "Jun 2022",
-      "business": "Joinsy",
-      "description": "Desenvolvimento e manutenção de automações para extração de dados e participação em processos licitatórios de portais públicos e privados.",
-      "title": "Desenvolvedor RPA / Web Crawling",
+      "title": "Desenvolvedor RPA",
+      "description": "Automações em Node.js/TypeScript para extração de dados em portais licitatórios. Filas em RabbitMQ orquestrando execuções simultâneas e rotinas de monitoramento que detectavam falhas antes do impacto operacional.",
       "skills": [
-        "JavaScript",
-        "Typescript",
         "Node.js",
+        "TypeScript",
+        "JavaScript",
         "RabbitMQ",
         "Docker",
         "PostgreSQL",
         "Git",
-        "Unix"
+        "Linux"
       ]
     }
   ]
