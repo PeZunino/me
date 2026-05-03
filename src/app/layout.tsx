@@ -12,10 +12,14 @@ const manrope = Manrope({
 	variable: '--font-manrope-mono',
 });
 
-
 export const metadata: Metadata = {
 	title: 'Pedro Zunino',
 	icons: { icon: '/icon.JPG', },
+};
+
+export const viewport = {
+	width: 'device-width',
+	initialScale: 1,
 };
 
 export default function RootLayout({ children, }: Readonly<{

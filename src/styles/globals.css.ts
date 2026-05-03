@@ -2,12 +2,12 @@ import { globalStyle } from '@vanilla-extract/css';
 import { vars } from './theme/default.css';
 
 globalStyle('body::before', {
-  content: '',
-  position: 'fixed',
-  inset: 0,
+	content: '',
+	position: 'fixed',
+	inset: 0,
 	zIndex: 0,
-  pointerEvents: 'none',
-  background: `
+	pointerEvents: 'none',
+	background: `
     radial-gradient(
       600px circle at var(--x) var(--y),
       rgba(212, 164, 24, 0.06),
@@ -15,27 +15,26 @@ globalStyle('body::before', {
     )
   `,
 });
+
 globalStyle('html', {
-  fontSize: '16px',
-  '@media': {
-    '(max-width: 900px)': {
-      fontSize: '14px',
-    },
-  },
+	fontSize: '16px',
+	'@media': {'(max-width: 900px)': {fontSize: '14px',},},
 });
 
  
 
 globalStyle('body', {
-  color: vars.color.white,
+	color: vars.color.white,
 	backgroundColor: vars.color.black,
   
 	position: 'relative',
-  zIndex: 1,
+	zIndex: 1,
+	overflowX: 'hidden',
 
 	fontFamily: vars.font.family.manrope,
-  fontWeight: vars.font.weight.md,
+	fontWeight: vars.font.weight.md,
 });
+
 
 globalStyle('h1',{
 	fontSize: vars.font.size.xxl,

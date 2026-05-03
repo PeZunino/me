@@ -16,20 +16,20 @@ export default function HomeHeader(){
 					title="PeZunino"
 					href="https://github.com/PeZunino"
 				>
-					<IoLogoGithub size={24} />
+					<IoLogoGithub size={28} />
 				</Link>
 				<Link
 					title="pedrozunino.santos@gmail.com"
 					href="mailto:pedrozunino.santos@gmail.com"
 
 				>
-					<IoMdMail size={24} />
+					<IoMdMail size={28} />
 				</Link>
 				<Link
 					title="Pedro Zunino dos Santos"
 					href="https://www.linkedin.com/in/pedro-zunino"
 				>
-					<IoLogoLinkedin size={24} />
+					<IoLogoLinkedin size={28} />
 				</Link>
 			</div>
 		</>

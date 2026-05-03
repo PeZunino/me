@@ -7,9 +7,15 @@ export const homeContentContainer = style({
 	display: 'flex',
 	justifyContent: 'space-between',
 
-	minWidth: '595px',
-	'@media': {'(max-width: 1308px)': {flexDirection: 'column',}},
+	'@media': {
+		'(max-width: 1308px)': {
+			flexDirection: 'column',
+			padding: '0 4rem' 
+		},
+		'(max-width: 640px)': { padding: '0 1.25rem' },
+	},
 });
+
 
 export const leftSideContent = style({
 	flex: '0 0 20rem',
@@ -39,7 +45,7 @@ export const homePresentationText = style({
 	marginBottom:'2rem',
 	lineHeight: '1.625',
 	color:vars.color.gray,
-	'@media': {'(max-width: 1308px)': {marginBottom: '8rem',}},
+	'@media': {'(max-width: 1308px)': {marginBottom: '3rem',}},
 
 });
 

@@ -19,10 +19,10 @@ export const container = style({
 		'(max-width: 900px)': {
 			display:'flex',
 			flexDirection:'column',
-			marginBottom: '6rem',
+			marginBottom: '3rem',
 
 		},
-		'(min-width: 900px)': {
+		'(hover: hover) and (min-width: 900px)': {
 			
 			selectors: {
 				'&:hover':{
